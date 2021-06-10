@@ -37,23 +37,35 @@ public class PessoaController {
 
 		System.out.print("Informe a altura: ");
 		pessoa.setAltura(tec.nextDouble());
+		
+		System.out.print("Informe o pais: ");
+		tec.nextLine();
+		pessoa.setNomeDopais(tec.nextLine());
 
+		
 		return pessoa;
 	}
 
 	public List<Pessoa> listarPessoas(List<Pessoa> pessoas){
 		System.out.println("--- PESSOAS CADASTRADAS ---");
 
-		System.out.printf("| %20s | %4s | %5s | %6s |\n", "Nome", "Ano", "Idade", "Altura");
+		System.out.printf("| %20s | %4s | %5s | %6s | %10s |\n",
+				"Nome", "Ano", "Idade", "Altura", "Pais");
 
 		for(int i = 0; i < pessoas.size(); i++){
-			System.out.printf("| %20s | %4d | %5d | %6.2f |\n",
+			System.out.printf("| %20s | %4d | %5d | %6.2f | %10s |\n",
 					pessoas.get(i).getNome(),
 					pessoas.get(i).getAnoDeNascimento(),
 					pessoas.get(i).getIdade(),
-					pessoas.get(i).getAltura());
+					pessoas.get(i).getAltura(),
+					pessoas.get(i).getNomeDopais());
 		}
 
 		return pessoas;
+	}
+	
+	public Endereco cadEndereco() {
+		Endereco endereco = new Endereco();
+		return endereco;
 	}
 }

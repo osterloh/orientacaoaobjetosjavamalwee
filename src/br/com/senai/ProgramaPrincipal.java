@@ -1,14 +1,22 @@
-package br.com.senai.pessoa;
+package br.com.senai;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import br.com.senai.loja.VendaController;
+import br.com.senai.pessoa.Pessoa;
+import br.com.senai.pessoa.PessoaController;
+import br.com.senai.produto.Produto;
+import br.com.senai.produto.ProdutoController;
 
 public class ProgramaPrincipal {
 
 	public static void main(String[] args) {
 		List<Pessoa> pessoas = new ArrayList<>();
-
+		List<Produto> produtos = new ArrayList<Produto>();
+ 
 		PessoaController pessoaController = new PessoaController();
+		ProdutoController produtoController = new ProdutoController();
 
 		boolean sair = false;
 
@@ -31,7 +39,7 @@ public class ProgramaPrincipal {
 					break;
 
 				default:
-					System.out.println("Op√ß√£o inv√°lida!");
+					System.out.println("OpÁ„o inv·lida!");
 					break;
 			}
 		}while(!sair);

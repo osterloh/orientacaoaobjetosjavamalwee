@@ -3,6 +3,8 @@ package br.com.senai.pessoa;
 import java.util.List;
 import java.util.Scanner;
 
+import br.com.senai.endereco.Endereco;
+
 public class PessoaController {
 
 	private Scanner tec;

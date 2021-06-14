@@ -1,4 +1,4 @@
-package br.com.senai.pessoa;
+package br.com.senai.endereco;
 
 //CLASSE
 public class Endereco extends Cidade {

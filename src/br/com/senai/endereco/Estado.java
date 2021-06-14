@@ -1,4 +1,4 @@
-package br.com.senai.pessoa;
+package br.com.senai.endereco;
 
 public class Estado extends Pais {
 

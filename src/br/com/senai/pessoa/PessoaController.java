@@ -18,14 +18,6 @@ public class PessoaController {
 		return tec.nextInt();
 	}
 
-	public void menu(){
-		System.out.println("\n--- MENU ---");
-		System.out.println("1) Cadastrar pessoa");
-		System.out.println("2) Listar pessoas cadastradas");
-		System.out.println("9) Sair do sistema");
-		System.out.println("-------------------");
-	}
-
 	public Pessoa cadastrarPessoa(){
 		Pessoa pessoa = new Pessoa();
 

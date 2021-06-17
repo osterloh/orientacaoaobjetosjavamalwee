@@ -21,7 +21,7 @@ public class ProgramaPrincipal {
 		boolean sair = false;
 
 		do{
-			pessoaController.menu();
+			menu();
 
 			int opcao = pessoaController.leOpcao();
 
@@ -32,6 +32,18 @@ public class ProgramaPrincipal {
 
 				case 2:
 					pessoaController.listarPessoas(pessoas);
+					break;
+					
+				case 3:
+					produtos.add(produtoController.cadastrarProduto());
+					break;
+					
+				case 4:
+					produtoController.listarProdutos(produtos);
+					break;
+					
+				case 5:
+					produtoController.editarProduto(produtos);
 					break;
 
 				case 9:
@@ -45,6 +57,17 @@ public class ProgramaPrincipal {
 		}while(!sair);
 
 		System.out.println("Sistema finalizado!");
+	}
+	
+	public static void menu(){
+		System.out.println("\n--- MENU ---");
+		System.out.println("1) Cadastrar pessoa");
+		System.out.println("2) Listar pessoas cadastradas");
+		System.out.println("3) Cadastrar produto");
+		System.out.println("4) Listar produtos");
+		System.out.println("5) Editar produto");
+		System.out.println("9) Sair do sistema");
+		System.out.println("-------------------");
 	}
 
 }

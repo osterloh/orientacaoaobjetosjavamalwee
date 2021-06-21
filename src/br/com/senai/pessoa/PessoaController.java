@@ -41,13 +41,20 @@ public class PessoaController {
 	}
 
 	public List<Pessoa> listarPessoas(List<Pessoa> pessoas){
+		
+		if(pessoas.isEmpty()) {
+			System.out.println("Não possui dados para listar.");
+			return null;
+		}
+		
 		System.out.println("--- PESSOAS CADASTRADAS ---");
 
-		System.out.printf("| %20s | %4s | %5s | %6s | %10s |\n",
-				"Nome", "Ano", "Idade", "Altura", "Pais");
+		System.out.printf("| %2s | %20s | %4s | %5s | %6s | %10s |\n",
+				"Id", "Nome", "Ano", "Idade", "Altura", "Pais");
 
 		for(int i = 0; i < pessoas.size(); i++){
-			System.out.printf("| %20s | %4d | %5d | %6.2f | %10s |\n",
+			System.out.printf("| %2d | %20s | %4d | %5d | %6.2f | %10s |\n",
+					i,
 					pessoas.get(i).getNome(),
 					pessoas.get(i).getAnoDeNascimento(),
 					pessoas.get(i).getIdade(),

@@ -3,6 +3,7 @@ package br.com.senai.pessoa;
 import java.util.Calendar;
 
 import br.com.senai.endereco.Endereco;
+import br.com.senai.produto.Produto;
 
 //CLASSE
 public class Pessoa extends Endereco {
@@ -12,7 +13,7 @@ public class Pessoa extends Endereco {
 	private int anoDeNascimento;
 	private int idade;
 	private double altura;
-
+	
 	// METODOS
 	public String getNome() {
 		return nome;

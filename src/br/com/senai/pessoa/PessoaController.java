@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import br.com.senai.endereco.Endereco;
+import br.com.senai.produto.Produto;
 
 public class PessoaController {
 
@@ -35,7 +36,6 @@ public class PessoaController {
 		System.out.print("Informe o pais: ");
 		tec.nextLine();
 		pessoa.setNomeDopais(tec.nextLine());
-
 		
 		return pessoa;
 	}
@@ -65,8 +65,26 @@ public class PessoaController {
 		return pessoas;
 	}
 	
-	public Endereco cadEndereco() {
-		Endereco endereco = new Endereco();
-		return endereco;
+	public void menu(List<Pessoa> pessoas) {
+		System.out.println("\n--- MENU DE PESSOAS ---");
+		System.out.println("1) Cadastrar pessoa");
+		System.out.println("2) Listar pessoas cadastradas");
+		
+		int opcao = tec.nextInt();
+		
+		switch (opcao) {
+		case 1:
+			pessoas.add(cadastrarPessoa());
+			break;
+			
+		case 2:
+			listarPessoas(pessoas);
+			break;
+
+		default:
+			System.out.println("Opção inválida!");
+			break;
+		}
 	}
+	
 }
